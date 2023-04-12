@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --cinza-terciario: #252525;
+    --azul-botao: #167BF7;
+    --cor-backgrouns: #00030C;
+    --fonte-principal: 'Inter', Sans-serif;
+}
+
+body{
+    background-color: var(--cor-backgrouns);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.principal{
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    align-items: center;
+
+}
+
+.container__caixa{
+    margin: 0 6em;
+}
+
+.conteiner__titulo{
+    font-size: 1.75em;
+    font-weight: 700;
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;
+}
+
+.container__botao{
+    background-color: var(--azul-botao);
+    color: var(--branco-principal);
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 1em;
+    display: block;
+    margin-bottom: 1em;
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso{
+    font-size: 0.75em;
+    text-align: center;
+    color: var(--cinza-secundario);
+}
+
+.secundario{
+    margin: 0 11em;
+    align-items: center;
+}
+
+.secundario__imagem{
+    width: 80%;
+}
+
+.container__descricao{
+    padding: 2em;
+}
+
+.descricao__titulo{
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+}
+
+.descricao__texto{
+    font-size: 1em;
+    color: var(--cinza-secundario);
+    width: 85%;
+}
+
+.botao_terceiro{
+    display: inline-block;
+    margin-top: 0.8em;
+}
+
+/* 
+MINHA SOLUÇÃO
+.dispositivos{
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 5em 155px;
+    justify-content: center;
+}
+
+.dispositivos__titulo{
+    text-align: center;
+    font-size: 1.75em;
+}
+
+.dispositivos__imagens{
+    display: flex;
+    justify-content: center;
+    gap: 69px;
+    margin-top: 0.5em;
+}
+
+.dispositivos__descricao{
+    display: flex;
+    text-align: center;
+    margin-top: 0.5em;
+} */
+
+.dispositivos{
+    text-align: center;
+    
+}
+.dispositivos__titulo{
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0em;
+}
+
+.item_lista{
+    font-size: 2em;
+    color: var(--branco-principal);
+}
+
+.rodape{
+    align-items: center;
+    text-align: center;
+    color: var(--branco-principal);
+    text-decoration: none;
+    margin: 5em 6em;
+
+}
+
+.rodape__logo{
+    margin: 2.5em 0;
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1.5em;
+    list-style-type:none;
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    font-size: 1em;
+    transition: 1s all;
+    
+}
+
+
+.rodape__texto{
+    font-size: 0.8em;
+    color: var(--cinza-secundario);
+    margin-bottom: 1.5em;
+}
+
+.container__botao:hover, .container__botao:focus {
+    transform: scale(1.04);
+    transition: 1s all;
+    background-color:#0e5fc3;
+}
+
+.botao_secundario:hover, .botao_secundario:focus {
+    background-color: var(--cinza-secundario);
+    color: var(--azul-botao);
+}
+
+ .lista__link a:hover, .lista__link:focus{
+    color: var(--azul-botao);
+    font-size: 1.05em;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background:transparent;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: 1px solid var(--cinza-secundario);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cinza-terciario);
+}
+
+@media screen and (max-width: 896px){
+
+    .container{
+        display:block;
+        background-image: none;
+        text-align: center;
+    }
+
+    .container__imagem{
+        width: 50vw;
+    }
+
+    .container__caixa{
+        margin: 2em 2em;    
+    }
+
+    .secundario{
+        margin: 0;
+        text-align: center;
+    }
+
+    .secundario__imagem{
+        width: 50%;
+    }
+
+    .descricao__texto{
+        width: 100%;
+    }
+
+    .dispositivos__titulo{
+        font-size: 2.5em;
+        margin: 0 0.5em;
+    }
+
+    .dispositivos__lista{
+        display: block;
+    }
+
+    .rodape__lista{
+        display: block;
+    }
+
+}
+    
